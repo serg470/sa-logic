@@ -1,0 +1,14 @@
+stages:
+- name: Docker
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: serg470/sentiment-analysis-logic:kuber
+      registry: 127.0.0.1:34259
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
+notification: {}
