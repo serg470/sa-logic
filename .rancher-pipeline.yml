@@ -10,5 +10,9 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+- name: LoadBalancer
+  steps:
+  - applyYamlConfig:
+      path: ./deployment-lb.yaml
 timeout: 60
 notification: {}
