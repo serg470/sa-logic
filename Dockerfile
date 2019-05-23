@@ -1,7 +1,7 @@
-FROM python:latest
+FROM python:3.8-alpine
 COPY sa /app
 WORKDIR /app
-RUN pip3 install --default-timeout=100 -r requirements.txt 
+RUN pip3 install -r requirements.txt 
 #&& \
 #    python3 -m textblob.download_corpora
 EXPOSE 5050
