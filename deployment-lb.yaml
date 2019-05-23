@@ -1,18 +1,10 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  annotations:
-    field.cattle.io/creatorId: user-js2ch
-    field.cattle.io/ingressState: '{"bG9naWMvc2EveGlwLmlvLy8vNTA1MA==":"deployment:sa:sentiment-analysis-logic"}'
-  creationTimestamp: "2019-05-23T12:18:18Z"
-  generation: 1
   labels:
     cattle.io/creator: norman
   name: logic
   namespace: sa
-  resourceVersion: "52527"
-  selfLink: /apis/extensions/v1beta1/namespaces/sa/ingresses/logic
-  uid: d9174984-7d54-11e9-963c-080027b2e727
 spec:
   rules:
   - host: xip.io
