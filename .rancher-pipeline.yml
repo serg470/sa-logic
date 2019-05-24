@@ -13,5 +13,9 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment-lb.yaml
+- name: Autoscale
+  steps:
+  - applyYamlConfig:
+      path: ./deployment-sc.yaml
 timeout: 60
 notification: {}
