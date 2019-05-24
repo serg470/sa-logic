@@ -21,8 +21,10 @@ spec:
       labels:
         workload.user.cattle.io/workloadselector: deployment-sa-sentiment-analysis-logic
     spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
       containers:
-      - image: serg470/sentiment-analysis-logic:kuber
+      - image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         imagePullPolicy: Always
         name: sentiment-analysis-logic
         ports:

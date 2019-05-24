@@ -4,8 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: serg470/sentiment-analysis-logic:kuber
-      registry: 127.0.0.1:34259
+      tag: sa-logic:${CICD_EXECUTION_SEQUENCE}
 - name: Deploy
   steps:
   - applyYamlConfig:
