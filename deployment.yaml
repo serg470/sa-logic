@@ -31,7 +31,13 @@ spec:
         - containerPort: 5050
           name: 5050tcp301001
           protocol: TCP
-        resources: {}
+        resources:
+          limits:
+            memory: 512Mi
+            cpu: 500m
+          requests:
+            memory: 256Mi
+            cpu: 100m
         securityContext:
           allowPrivilegeEscalation: false
           capabilities: {}
