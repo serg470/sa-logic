@@ -1,4 +1,3 @@
-
 ## Building the Docker Container
 
 ```
